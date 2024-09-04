@@ -21,6 +21,46 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/timeline.css">
+
+        <!-- pie chart script -->
+        <style>
+            /* Centering the chart */
+            .chart-container {
+              display: flex;
+              
+              justify-content: center;
+              align-items: center;
+              height: 500px; /* Full height to vertically center */
+            }
+          </style>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
+            google.charts.load("current", {packages:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+              var data = google.visualization.arrayToDataTable([
+                ['Investor Type', 'Total Token Allocated'],
+                ['Equity Investors',     50],
+                ['Non-Equity Investors',    950]
+              ]);
+      
+              var options = {
+                is3D: true,
+                backgroundColor: 'none', // Transparent background
+                legend: {
+                 textStyle: {
+                    
+                     color: 'white' // Legend font color to white
+            }
+          }
+
+              };
+      
+              var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+              chart.draw(data, options);
+            }
+          </script>
+        <!-- pie chart script end -->
     </head>
     <body class="dark">
        <!-- header -->
@@ -514,6 +554,24 @@
               </section>
             <!-- TimeLine Area ended -->
 
+            <!-- pie chart area -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 col-md-9">
+                    <div class="section-title p-relative text-center mb-20 wow fadeInLeft  animated" data-animation="fadeInLeft" data-delay=".4s">
+                     
+                    <h2>
+                        Investment Model
+                    </h2>
+                    <p>Wish Island Coin (WIC) provides a structured investment opportunity through non-tradable tokens designed exclusively for fundraising.
+                        Investors are segmented into two main categories: Equity and Non-Equity Investors, each with specific benefits and token allocations.</p>
+                </div>
+                </div>
+               
+            </div>
+            <div class="chart-container">
+                <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+              </div>
+            <!-- pie chart area ended -->
 
               <!-- pricing-area -->
             <section id="pricing" class="pricing-area pb-60 fix p-relative">
@@ -534,12 +592,12 @@
                         
                         <div class="col-lg-4 col-md-6">
                           <div class="pricing-box pricing-box2 mb-60">
-                                    <div class="pricing-head">  
+                                    <div class="pricing-head">
                                         
-                                        <h3> Coral Reef Package </h3>                                       
+                                        <h3> Coral Reef Package </h3>
                                         <div class="price-count">
                                             <h2>$10,000</h2>
-                                        </div> 
+                                        </div>
                                          <p>Investment Range</p>
                                         <hr>
                                     </div>
@@ -554,7 +612,7 @@
                                             <li>Total Payout Over 2 Years: $7,200</li>
                                             <li>Buyback Value: $22,166.67</li>
                                         </ul>
-                                    </div>      
+                                    </div>
                                      
 
                                     <div class="pricing-btn mb-30">
@@ -805,12 +863,13 @@
                                          <ul>
   
                                              <li>Monthly Return Rate: 24%</li>
-                                              <li>Total Tokens Allocated: 6,333,333.33 WIC</li>
+                                              <li>Total Tokens Allocated: 6,333,333.33</li>
                                               <li>Monthly Revenue: $240,000</li>
                                               <li>Quarterly Payout: $720,000</li>
                                               <li>Total Payout Over 2 Years: $5,760,000</li>
                                               <li>Buyback Value: $2,216,666.67</li>
                                           </ul>
+
                                       </div>      
                                        
   
@@ -821,7 +880,10 @@
                                            <i class="fa-thin fa-badge-check"></i> 
                                            <p>The Ultimate Retreat package represents the pinnacle of investment opportunities in the Wish Island
                                             project. With the highest return rate and the largest payouts, this package is for those looking to
-                                            maximize their investment and take full advantage of the island's growth potential.</p>
+                                            maximize their investment and take full advantage of the island's growth potential.
+                                            <br>
+                                            <br>
+                                        </p>
                                       </div>
                                   </div>
                           </div>
