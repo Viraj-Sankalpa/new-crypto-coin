@@ -10,6 +10,8 @@
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- CSS here -->
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/magnific-popup.css">
@@ -21,18 +23,20 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/timeline.css">
+        <link rel="stylesheet" href="css/header.css">
 
         <!-- pie chart script -->
         <style>
             /* Centering the chart */
             .chart-container {
               display: flex;
-              
               justify-content: center;
               align-items: center;
-              height: 500px; /* Full height to vertically center */
-            }
+              height: 600px;
+              
+              }
           </style>
+          
           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
           <script type="text/javascript">
             google.charts.load("current", {packages:["corechart"]});
@@ -43,104 +47,65 @@
                 ['Equity Investors',     50],
                 ['Non-Equity Investors',    950]
               ]);
-      
+          
               var options = {
                 is3D: true,
                 backgroundColor: 'none', // Transparent background
+                colors: ['#F7AB00', '#77340a'], // Custom colors
                 legend: {
-                 textStyle: {
-                    
-                     color: 'white' // Legend font color to white
-            }
-          }
-
+                  position: 'bottom',
+                  alignment: 'center', // Align legend center vertically
+                  textStyle: {
+                    color: 'white' // Legend font color to white
+                  }
+                },
+                chartArea: {
+                  left: '16%',
+                  top: '10%',
+                  width: '65%', // Adjusted to accommodate centered legend
+                  height: '80%' // Adjusted to accommodate centered legend
+                }
               };
-      
+          
               var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
               chart.draw(data, options);
             }
           </script>
+
+          
+
         <!-- pie chart script end -->
+
+
+
     </head>
     <body class="dark">
        <!-- header -->
-        <!-- <header class="header-area header">  
-			  <div id="header-sticky" class="menu-area pl-100 pr-100">
-                <div class="container-fluid">
-                    <div class="second-menu">
-                        <div class="row align-items-center">
-                             <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
-                                </div>
-                            </div>
-                           <div class="col-xl-4 col-lg-4 col-md-6">
-                              
-                                <div class="main-menu">
-                                    <nav id="mobile-menu">
-                                          <ul>
-                                            <li class="has-sub">
-                                                <a href="index.html">Home</a>
-                                                
-                                            </li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                            <li><a href="#">Associate Login</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                             <div class="col-xl-6 col-lg-6 text-right d-none d-lg-block text-right text-xl-right">
-                                 <div class="header-cta">
-                                    <ul>
-                                       <li>
-                                          <div class="call-box">
-                                              <div class="sc">
-                                                 <a href="#">Fb.</a>
-                                                 <a href="#">Ln.</a><br>
-                                                 <a href="#">Tw.</a>
-                                                 <a href="#">Be.</a>
-                                              </div>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="call-box">
-                                             <div class="text">
-                                               Modern Luxury Stewardship<br> Investment Models
-                                             </div>
-                                          </div>
-                                       </li>
-                                        <li>
-                                          <div class="call-box">
-                                             <div class="text">
-                                             P: +99 88 55 666 000<br> E: Info.wic@gmail.com
-                                             </div>
-                                          </div>
-                                       </li>
-                                        <li>
-                                            <div class="call-box">
-                                            <a href="#" class="menu-tigger"><img src="img/bg/toggle-menu.png" alt="logo"></a>
-                                            </div>
-                                        </li>
-                                      
-                                    </ul>
-                                 </div>
-                            </div>
-                            
-                                <div class="col-12">
-                                    <div class="mobile-menu"></div>
-                                </div>
-                        </div>
-                        </div>
-                </div>
-            </div>
-        </header> -->
+       <div class="nav">
+        <div id="toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+        
+        <div id="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      
         <!-- header-end -->
        
         <!-- main-area -->
         <main>
+
+            
            <!-- slider-area -->
-            <section id="parallax" class="slider-area fix p-relative">    
+            <section id="parallax" class="slider-area fix p-relative">
                 <div class="slider-shape ss-one layer" data-depth="0.10"><img src="img/shape/slider_shape01.png" alt="shape"></div>
                 <div class="slider-shape ss-two layer" data-depth="0.30"><img src="img/shape/slider_shape02.png" alt="shape"></div>
                 <div class="slider-shape ss-three layer" data-depth="0.30"><img src="img/shape/slider_shape03.png" alt="shape"></div>
@@ -148,7 +113,7 @@
                 <div class="slider-shape ss-five layer" data-depth="0.30"><img src="img/shape/slider_shape06.png" alt="shape"></div>
                 
                 <div class="slider-active-two" style="background-image: url(img/slider/line-bg.png); background-size: cover;">                       
-				<div class="single-slider slider-bg d-flex" style="background-image: url(img/slider/slider.png); background-size: cover;">   
+				<div class="single-slider slider-bg d-flex" style="background-image: url(img/slider/5.png); background-size: cover;">   
                         <div class="container">
             
                            <div class="row mt-200">
@@ -164,7 +129,8 @@
                                             developments globally.</p>    
                                     </div>
                                      <div class="slider-btn2 pl-100 mt-30">     
-                                            <a href="#" data-animation="fadeInLeft" data-delay=".4s">Associate Login <i class="fa-sharp fa-light fa-arrow-up"></i></a>  
+                                            <!-- <a href="#" data-animation="fadeInLeft" data-delay=".4s">Associate Login <i class="fa-sharp fa-light fa-arrow-up"></i></a> -->
+                                            <a href="contact.html" class="btn ss-btn smoth-scroll">Associate Login<i class="fa-sharp fa-light fa-arrow-up"></i></a>
                                         </div>        
                                 </div>
                                 <div class="col-lg-5 col-md-12 p-relative">
@@ -249,7 +215,7 @@
                                     meaning it is not tradable on exchanges. This structure ensures that the
                                     focus remains on raising capital and achieving the milestones necessary
                                     to bring Wish Island to life.</p>
-                                <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a>
+                                <!-- <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a> -->
                             </div>
                                <div class="sr-h-bg">
                                <img src="img/bg/sr-h-bg.png" alt="icon"/>
@@ -272,7 +238,7 @@
                                 <br>
                                 <br>
                             </p>
-                                <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a>
+                                <!-- <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a> -->
                             </div>
                                <div class="sr-h-bg">
                                <img src="img/bg/sr-h-bg.png" alt="icon"/>
@@ -291,7 +257,7 @@
                                 investment tiers, with annual revenue shares distributed according to
                                 the investor's package. This structured approach provides transparency
                                 and predictable returns.</p>
-                                <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a>
+                                <!-- <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a> -->
                             </div>
                                <div class="sr-h-bg">
                                <img src="img/bg/sr-h-bg.png" alt="icon"/>
@@ -314,7 +280,7 @@
                                 <br>
                                 <br>
                             </p>
-                                <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a>
+                                <!-- <a class="btn" href="#">Read More <i class="fa-sharp fa-light fa-arrow-up"></i></a> -->
                             </div>
                                <div class="sr-h-bg">
                                <img src="img/bg/sr-h-bg.png" alt="icon"/>
@@ -325,13 +291,14 @@
                 </div>
             </section>
            <!-- services-three-area -->
+
              <!-- about-area -->
-             <section id="about" class="about-area about-p pt-120 pb-120 p-relative fix">
-                <div class="container">
+             <section id="about" class="about-area about-p pt-120 pb-120 p-relative fix about-gradient">
+                <div class="container ">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-                                <img src="img/features/about_img_02.png" alt="img">                               
+                                <img src="img/features/bg11.png" alt="img">                               
                             </div>
                           
                         </div>
@@ -344,11 +311,11 @@
                                     <p class="pline">Wish Island is a visionary development project designed to transform a
                                         pristine island into a luxurious and sustainable retreat for the world's
                                         most discerning travelers.</p>
-                                    <p>Located in an idyllic and untouched region,
+                                    <p class="ppp">Located in an idyllic and untouched region,
                                         Wish Island aims to blend modern luxury with environmental
                                         stewardship, creating a destination that offers unparalleled
                                         experiences while preserving the natural beauty of the surroundings.</p>
-                                    <p>Wish Island Coin (WIC) is the exclusive token designed to support the
+                                    <p class="ppp">Wish Island Coin (WIC) is the exclusive token designed to support the
                                         development of the Wish Island project. As a non-tradable token, WIC
                                         is used solely for fundraising purposes, offering investors a unique
                                         opportunity to be part of a visionary project. By investing in WIC,
@@ -356,8 +323,8 @@
                                         Island while benefiting from structured returns.</p>
                                    <div class="about-content2">
                                     <div class="row">
-                                    <div class="col-md-12">
-                                     <ul class="green2">                                              
+                                    <!-- <div class="col-md-12">
+                                     <ul class="green2">
                                         <li>
                                             <div class="abcontent">
                                                 <div class="ano"><span>01</span></div> 
@@ -373,7 +340,7 @@
                                               
                                          </li>
                                      </ul>
-                                    </div>
+                                    </div> -->
                                     </div>
                                 </div>
    
@@ -568,15 +535,16 @@
                 </div>
                
             </div>
+           
             <div class="chart-container">
-                <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+                <div id="piechart_3d" style="width: 1000px; height: 600px;"></div> <!-- Increased width and height -->
               </div>
             <!-- pie chart area ended -->
 
               <!-- pricing-area -->
             <section id="pricing" class="pricing-area pb-60 fix p-relative">
                 <div class="container"> 
-                        <div class="row justify-content-center align-items-center">
+                        <div class="row justify-content-center align-items-center ">
                             <div class="col-lg-8 col-md-9">
                                 <div class="section-title p-relative text-center mb-50 wow fadeInLeft  animated" data-animation="fadeInLeft" data-delay=".4s">
                                  
@@ -591,7 +559,7 @@
                    <div class="row">
                         
                         <div class="col-lg-4 col-md-6">
-                          <div class="pricing-box pricing-box2 mb-60">
+                          <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                     <div class="pricing-head">
                                         
                                         <h3> Coral Reef Package </h3>
@@ -627,7 +595,7 @@
                                 </div>
                         </div>
                          <div class="col-lg-4 col-md-6">
-                          <div class="pricing-box pricing-box2 mb-60">
+                          <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                     <div class="pricing-head">  
                                         
                                        <h3>Ocean Breeze Package</h3>                                       
@@ -659,11 +627,14 @@
                                          <p>The Ocean Breeze package offers mid-level investors an opportunity to receive higher returns while still
                                             maintaining manageable investment levels. This package is ideal for those who want a balance of risk and
                                             reward.</p>
+                                            
                                     </div>
+                                    <br>
+                                  
                                 </div>
                         </div>
                           <div class="col-lg-4 col-md-6">
-                          <div class="pricing-box pricing-box2 mb-60">
+                          <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                     <div class="pricing-head">  
                                         
                                         <h3>Mangrove Package</h3>                                       
@@ -696,10 +667,12 @@
                                             Island project. This package delivers solid returns with a strategic buyback option, making it a highly attractive
                                             investment.</p>
                                     </div>
+                                    <br>
                                 </div>
+                                
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="pricing-box pricing-box2 mb-60">
+                            <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                       <div class="pricing-head">  
                                           
                                           <h3>Lagoon Luxury Package</h3>                                       
@@ -735,7 +708,7 @@
                                   </div>
                           </div>
                           <div class="col-lg-4 col-md-6">
-                            <div class="pricing-box pricing-box2 mb-60">
+                            <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                       <div class="pricing-head">  
                                           
                                           <h3>Tropical Paradise Package</h3>                                       
@@ -771,7 +744,7 @@
                                   </div>
                           </div>
                           <div class="col-lg-4 col-md-6">
-                            <div class="pricing-box pricing-box2 mb-60">
+                            <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                       <div class="pricing-head">  
                                           
                                           <h3>Island Oasis Package</h3>                                       
@@ -807,7 +780,7 @@
                                   </div>
                           </div>
                           <div class="col-lg-4 col-md-6">
-                            <div class="pricing-box pricing-box2 mb-60">
+                            <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                       <div class="pricing-head">  
                                           
                                           <h3>Blue Lagoon Package</h3>                                       
@@ -848,7 +821,7 @@
                                   </div>
                           </div>
                           <div class="col-lg-4 col-md-6">
-                            <div class="pricing-box pricing-box2 mb-60">
+                            <div class="pricing-box pricing-box2 mb-60 custom-gradient">
                                       <div class="pricing-head">  
                                           
                                           <h3>Ultimate Retreat Package</h3>                                       
@@ -1081,6 +1054,7 @@
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="js/vendor/jquery-3.6.0.min.js"></script>
         <script src="js/popper.min.js"></script>
+        <script src="js/header.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/ajax-form.js"></script>
@@ -1097,5 +1071,12 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/element-in-view.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+  
+   
+    
     </body>
 </html>
